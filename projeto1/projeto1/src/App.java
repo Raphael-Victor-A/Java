@@ -1,21 +1,21 @@
-import java.util.Scanner;
-
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Scanner myObj  = new Scanner(System.in);
-        System.out.println("Digite os dois valores da soma: ");
-        
-        int numero1 = myObj.nextInt();
-        int numero2 = myObj.nextInt();
-        int soma = numero1 + numero2;
-        System.out.println("Resultado: "+ soma);
+        DadosPessoais raphael = new DadosPessoais();
+        Enderecos endereco = new Enderecos();
 
-        while(soma < 1000){
-            soma++;
-            System.out.println(soma);
-        }
-        
-        
+        raphael.setIdade(20);
+        raphael.setPrimeiroNome("Raphael");
+        raphael.setSobrenome("Alencar");
+        raphael.setCpf("06514371132");
+        raphael.setSexo('M');
+        raphael.setDataNascimento("09/09/2004");
+        raphael.imprimirDP();
+
+        endereco.setRua("Rua antonio mena goncalves");
+        endereco.setNumero(27);
+        endereco.setBairro("Vila gomes");
+        endereco.setCep("79022320");
+        endereco.imprimirEnd();
     }
 }
