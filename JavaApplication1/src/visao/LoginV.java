@@ -44,15 +44,25 @@ public class LoginV extends javax.swing.JFrame {
         JLTitulo.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         JLTitulo.setText("AUTENTICAÇÃO DO USUÁRIO");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(null));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setText("USUÁRIO:");
 
-        JTLogin.setText("informe o usuário");
+        JTLogin.setText("INFORME USUARIO");
+        JTLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JTLoginMouseClicked(evt);
+            }
+        });
 
         jLabel2.setText("SENHA:");
 
-        JPSenha.setText("jPasswordField1");
+        JPSenha.setText("AAAAAAAAAA");
+        JPSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JPSenhaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -85,7 +95,7 @@ public class LoginV extends javax.swing.JFrame {
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(null));
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         JBLogin.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
         JBLogin.setText("LOGIN");
@@ -97,6 +107,11 @@ public class LoginV extends javax.swing.JFrame {
 
         JBLimpar.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
         JBLimpar.setText("LIMPAR");
+        JBLimpar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JBLimparMouseClicked(evt);
+            }
+        });
 
         JBCriar.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         JBCriar.setText("CRIAR");
@@ -172,6 +187,20 @@ public class LoginV extends javax.swing.JFrame {
         CadastroLogin telaCadLogin=new CadastroLogin();
         telaCadLogin.setVisible(true);
     }//GEN-LAST:event_TelaCadastroLogin
+
+    private void JBLimparMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JBLimparMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JBLimparMouseClicked
+
+    private void JPSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JPSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JPSenhaActionPerformed
+
+    private void JTLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JTLoginMouseClicked
+        JTLogin.setText(""); 
+        JPSenha.setText("");
+
+    }//GEN-LAST:event_JTLoginMouseClicked
 
     /**
      * @param args the command line arguments

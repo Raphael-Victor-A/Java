@@ -6,6 +6,7 @@ package controle;
 
 import java.util.ArrayList;
 import modelo.LoginM;
+import visao.PrincipalV;
 
 /**
  *
@@ -39,6 +40,8 @@ public class LoginC {
         {
             //Chamar a tela Principal
             texto="Cadastro encontrado!";
+            PrincipalV main = new PrincipalV();
+            main.setVisible(true);
         }
         else{
             //informar que login não existe
